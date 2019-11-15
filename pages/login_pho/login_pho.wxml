@@ -1,0 +1,12 @@
+<!--pages/login_pho/login_pho.wxml-->
+<view class="phone">
+  <text class="phone_text">手机号码</text>
+  <input placeholder="请输入有效手机号" class="phone_inp"/>
+  <button class="btn_msm">发送验证码</button>
+</view>
+<view class="phone">
+  <text class="phone_text">验证码</text>
+  <input placeholder="请输入六位验证码" class="phone_inp" style="transform:translate(-17px,0)"/>
+</view>
+
+<view class="btn-submit">登录</view>

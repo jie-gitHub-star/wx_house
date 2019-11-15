@@ -1,0 +1,19 @@
+<!--pages/user_info/user_info.wxml-->
+<view class="side-top">
+  <!-- 头像 -->
+  <image src="#" class="top_pic"/> 
+  <!--手机号码 -->
+  <view class="top_text">191***09</view> 
+</view>
+
+<view class="my_coll">
+  <icon type="info" size="25px" color="#eee"/>
+  <text >我的关注</text>
+  <icon type="success" size="25px" color="#eee" style="margin-left:60%"/>
+</view>
+<view class="outlogin my_coll">
+  <icon type="info" size="25px" color="#eee"/>
+  <text >退出登录</text>
+  <icon type="success" size="25px" color="#eee" style="margin-left:60%"/>
+</view>
+

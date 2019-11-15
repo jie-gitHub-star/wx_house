@@ -1,0 +1,40 @@
+/* pages/login_pho/login_pho.wxss */
+.phone{
+  width:90%;
+  margin:5px auto;
+  display:flex;
+  direction:clounm;
+  font-size:.5em; 
+  border-bottom:1px solid #ddd;
+}
+.phone_text{
+  width:20%;
+  line-height:40px;
+}
+.phone_inp{
+  width:40%;
+  padding:8px 14px;
+  /* vertical-align: center; */
+  line-height:40px;
+}
+.btn_msm{
+  border:1px solid #999;
+  border-radius:5px;
+  font-weight: 100;
+  width:30%;
+  font-size:.5rem;
+  padding:8px 14px;
+  margin:0;
+  height:40px;
+}
+.btn-submit{
+  width:90%;
+  margin:10px auto;
+  font-size:.5rem;
+  padding:.5em 0;
+  line-height:25px;
+  border-radius:5px;
+  background:#FF9800;
+  color:white;
+  text-align:center;
+}

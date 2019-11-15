@@ -1,0 +1,30 @@
+/* pages/login/login.wxss */
+.mainbar{
+  width: 90%;
+  margin:0 auto;
+  text-align:center;
+}
+.mainbar>image{
+  width:5rem;
+  height:5rem;
+  border:1px solid red;
+  border-radius:.5rem;
+}
+.logotxt{
+  font-family: "方正舒体";
+  font-size:2rem;
+  color:gold;
+}
+.btn{
+  width:90%;
+  height:3rem;
+  margin:10px auto;
+  border:1px solid orange;
+  text-align: center;
+  line-height:3rem;
+  border-radius:5px;
+}
+.wx{
+  background:orange;
+  color:white;
+}

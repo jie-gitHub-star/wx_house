@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shopinfo/shopinfo",
+    "pages/second_house/second_house",
+    "pages/login/login",
+    "pages/user_info/user_info",
+    
+
+    "pages/login_pho/login_pho",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/now/now"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ihome",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#ddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icon/icons/ind.png",
+        "selectedIconPath": "./icon/icons/ind.png"
+      },
+      {
+        "pagePath": "pages/now/now",
+        "text": "消息",
+        "iconPath": "./icon/icons/news.png",
+        "selectedIconPath": "./icon/icons/news.png"
+      },
+      {
+        "pagePath": "pages/user_info/user_info",
+        "text": "我的",
+        "iconPath": "./icon/icons/me.png",
+        "selectedIconPath": "./icon/icons/me.png"
+      }
+    ]
+  }
+}

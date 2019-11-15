@@ -1,0 +1,51 @@
+/* pages/second_house/second_house.wxss */
+.search{
+  width: 90%;
+  margin:5px auto;
+  border-radius:1.5rem;
+  /* line-height: 3rem; */
+  padding:.5rem 0;
+  height:1.5rem;
+  background-color:#f0f0f0;
+  display:flex;
+  direction:colunm;
+}
+.iconsea{
+  width:2rem;
+  height:2rem;
+}
+/* 条件选框 */
+.sea_area{
+  display:flex;
+  justify-content:center;
+}
+.sea_one{
+  width:5rem;
+  height:4rem;
+  line-height:4rem;
+  display:flex;
+  justify-content:center;
+  /* border:1px solid red; */
+  border-right:1px solid #eee;
+}
+.one_txt{
+  height:100%;
+  text-align:center;
+}
+
+.one_icon{
+  width:20px;
+  height:20px;
+  text-align:center;
+ 
+}
+.one_icon>image{
+  width:100%;height:100%;
+}
+
+.hr_{
+  width:100%;
+  height:1rem;
+  border-top:1px solid #eee;
+}
+

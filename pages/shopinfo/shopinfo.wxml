@@ -1,0 +1,71 @@
+<!-- 轮播图 -->
+<swiper indicator-dots="true" interval="1000" duration="1000">
+  <block wx:for="{{slider}}" wx:for-item="u" wx:key="key">
+    <swiper-item>
+      <image src="{{u.src}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 收藏转发 -->
+<view class="_func">
+  <!-- cellected -->
+    <image src="{{icon_cell}}"/>
+  <!-- share -->
+    <image src="{{icon_share}}"/>
+</view>
+<!-- 描述信息 -->
+<view class="info_main">
+<!-- 近地铁，满五年的那个 -->
+  <view class="spa">
+    <view class="spa_view">222</view>
+    <view class="spa_view">222</view>
+  </view>
+<!-- 描述 desc -->
+    <view class="h3">丁秀新苑丁秀新苑丁秀新苑丁秀新苑丁秀新苑</view>
+  <!-- 房子基本信息 多少万，几室几厅，面积 -->
+  <view class="f_bor">
+    <view class="f_bar">
+      <view class="bar_txt">500w</view>
+      <view class="bar_btn">售价</view>
+    </view>
+    <view class="f_bar">
+      <view class="bar_txt">500w</view>
+      <view class="bar_btn">房型</view>
+    </view>
+    <view class="f_bar">
+      <view class="bar_txt">500w</view>
+      <view class="bar_btn">面积</view>
+    </view>
+  </view>
+  <!-- 详细信息列表 -->
+  <view class="info_ol">
+    <view class="ol-i">
+      <view>单价 <text class="ol_txt">1233</text></view>
+      <view>单价 <text class="ol_txt">1233</text></view>
+      <view>单价 <text class="ol_txt">1233</text></view>
+      <view>单价 <text class="ol_txt">1233</text></view>
+      <view>单价 <text class="ol_txt">1233</text></view>
+    </view> 
+    <view class="ol-i">   
+      <view> 单价 <text class="ol_txt">1233</text></view>
+    </view>
+  </view>
+
+</view>
+
+
+<!-- 悬浮栏 -->
+<view class="flo_btn_nav">
+  <view class="nav_main">
+    <view class="f_b_n_img"><image src="#" alt="头像" /></view>
+    <view class="f_b_n_txt">
+      <view class="n_txt_1">刘伟</view>
+      <view class="n_txt_1">评分</view>
+    </view>
+    <button class="bn_btn">在线咨询</button>
+    <button class="bn_btn" style="background-color:#FD8000">电话联系</button>
+  </view>
+</view>
+<!--  -->
+
+

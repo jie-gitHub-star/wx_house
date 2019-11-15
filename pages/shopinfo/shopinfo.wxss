@@ -1,0 +1,122 @@
+._func{
+  height:2rem;
+  position:absolute;
+  top:8rem;
+  right:0;
+}
+._func>image{
+  background-color:white;
+  width:2rem;
+  height:80%;
+  border-radius:50%;
+  text-align:center;
+  line-height:4rem;
+  margin-right:1rem;
+}
+.info_main{
+ padding:5%;
+}
+.spa{
+  font-size:.5rem;
+  display:flex;
+  direction:colunm;
+}
+.spa_view{
+  padding:.5em;
+  border-radius:3px;margin-right:5px;
+  color:#89A1A5;
+  background-color:#E8F5FD;
+}
+.h3{
+  margin-top:.5rem;
+  padding:.3rem 0;
+  font-size:1.2rem;
+  font-weight:700;
+}
+.f_bor{
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+  border-bottom:1px solid #efefef;
+  border-top:1px solid #efefef;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+.bar_txt{
+  font-size:1.2rem;
+  color:red;
+}
+.bar_btn{
+  color:#7D7E7E;
+}
+
+/* 详细信息列表 */
+.info_ol{
+  margin:1rem 0;
+  font-size:1rem;
+  display:flex;
+  justify-content:clounm;
+}
+.info_ol>view{
+  width:50%;
+  color:#7D7E7E;
+
+}
+.ol_txt{
+  color:black;
+}
+
+.ol-i>view{
+  margin-bottom:5px;
+}
+
+
+
+
+
+
+
+
+/* 悬浮导航栏 */
+.flo_btn_nav{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  
+}
+.nav_main{
+  display:flex;
+  direction:center;
+  line-height:4rem;
+  height:4rem;
+}
+.f_b_n_img{
+  width:4rem;
+  height:4rem;
+   margin-right:10px;
+}
+.f_b_n_img>image{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  
+}
+.f_b_n_txt{
+  /* display:flex;
+  direction:row; */
+  line-height:2rem;
+  margin:0 .5em;
+}
+.n_txt_1{
+  display:block;
+}
+.bn_btn{
+  line-height:2.5rem;
+  margin:.25rem  0;
+  max-height:3.5rem;
+  max-width:7rem;
+  border-radius:5px;
+  font-size:1rem;
+  background-color:#FEB407;
+  color:white;
+}
