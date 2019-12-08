@@ -1,18 +1,33 @@
+swiper-item{
+  text-align:center;
+}
+swiper-item>image{  
+  height:100%;
+}
+swiper{
+  height:200px;
+}
 ._func{
   height:2rem;
   position:absolute;
-  top:8rem;
+  top:12.5rem;
   right:0;
+  display:flex;
+  justify-content:colunm;
 }
-._func>image{
-  background-color:white;
-  width:2rem;
-  height:80%;
+.btns2{
+  overflow:hidden;
   border-radius:50%;
   text-align:center;
-  line-height:4rem;
+  line-height:3rem;
   margin-right:1rem;
+  padding:0em;
 }
+._func>.btns2>image{
+  width:50rpx;
+  height:50rpx;
+}
+
 .info_main{
  padding:5%;
 }
@@ -64,6 +79,7 @@
 }
 .ol_txt{
   color:black;
+  font-size:.8rem;
 }
 
 .ol-i>view{

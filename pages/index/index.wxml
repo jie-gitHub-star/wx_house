@@ -1,180 +1,48 @@
-<view class="search-border">
-  <text class="search-text">广州 v </text>
+<view class="search-border" bindtap="goSearch">
+  <text class="search-text" bindtap="goSearch">广州 v </text>
   <icon type="search" size="20px" color="#999" style="float:left"/>
-  <input type="text" class="search-content" placeholder="请输入小区名或商圈" />
+  <input type="text" class="search-content" placeholder="请输入小区名或商圈" bindtap="goSearch"/>
   <view style="clear:both"></view>
 </view>
 
-
 <view class="top_pic">
-  <image src="#"/>
+  <image src="{{headpic}}"/>
 </view>
 
 <view class="index_nav">
-    <view class="nav_ones">
-      <image  src="#"/><text class="nav_text">二手房</text>
+  <block wx:for="{{icons}}" wx:key="keyo"  wx:for-item="itemo">
+    <view class="nav_ones" bindtap="tosea">
+      <image  src="{{itemo.src}}"/><text class="nav_text">{{itemo.txt}}</text>
     </view>
-    <view class="nav_ones">
-      <image  src="#"/><text class="nav_text">二手房</text>
-    </view>
-    <view class="nav_ones">
-      <image  src="#"/><text class="nav_text">二手房</text>
-    </view>
-    <view class="nav_ones">
-      <image  src="#"/><text class="nav_text">二手房</text>
-    </view>
+  </block>
 </view>
 
 <view class="outborder h3title">猜你喜欢</view>
-
+<block wx:for="{{datas}}" wx:for-item="items" wx:key="keys">
 <view class="contents_ones">
   <view class="main_content outborder">
-    <view class="contents_left_pic">
-      <image src="#" />
-      <view class="zx">甄选</view>
-    </view>
+      <view class="contents_left_pic" bindtap='toinfo' id="{{items.r_id}}">
+        <image src="{{addr}}{{items.pics}}" />
+        <view class="zx">甄选</view>
+      </view>
     <view class="active_text">
-      <view class="explain_desc">楼房描述_可以以可以wwwwwwwwwwww可以</view>
+      <view class="explain_desc" bindtap='toinfo' id="{{items.r_id}}">{{items.r_desc}}</view>
       <view class="explain_tag1">
-        <view>东南</view>
-        <view>大江</view>
+        <view>{{items.house_type}}</view>
+        <!-- <view>{{items}}</view> -->
       </view>
       <view class="explain_tag1 ">
-        <view class="tag2_sty">近地铁</view>
-        <view class="tag2_sty">近海边</view>
+        <view class="tag2_sty">{{items.dispark}}</view>
+        <view class="tag2_sty">{{items.oriented}}</view>
         <view class="tag2_sty">近大路</view>
       </view>
       <view class="explain_tag1">
-        <view class="now_price">400万</view>
-        <view>500/平方</view>
+        <view class="now_price">{{items.sell_price}}万</view>
+        <view>{{items.unit_price}}元/平方</view>
         
       </view>
     </view>
   </view>
 </view>
+</block>
 <!-- 重复内容 -->
-<view class="contents_ones">
-  <view class="main_content outborder">
-    <view class="contents_left_pic">
-      <image src="#" />
-      <view class="zx">甄选</view>
-    </view>
-    <view class="active_text">
-      <view class="explain_desc">楼房描述_可以可wwwwwwwwwwww</view>
-      <view class="explain_tag1">
-        <view>东南</view>
-        <view>大江</view>
-      </view>
-      <view class="explain_tag1 ">
-        <view class="tag2_sty">近地铁</view>
-        <view class="tag2_sty">近海边</view>
-        <view class="tag2_sty">近大路</view>
-      </view>
-      <view class="explain_tag1">
-        <view class="now_price">400万</view>
-        <view>500/平方</view>
-        
-      </view>
-    </view>
-  </view>
-</view>
-<view class="contents_ones">
-  <view class="main_content outborder">
-    <view class="contents_left_pic">
-      <image src="#" />
-      <view class="zx">甄选</view>
-    </view>
-    <view class="active_text">
-      <view class="explain_desc">楼房描述_可以可wwwwwwwwwwww</view>
-      <view class="explain_tag1">
-        <view>东南</view>
-        <view>大江</view>
-      </view>
-      <view class="explain_tag1 ">
-        <view class="tag2_sty">近地铁</view>
-        <view class="tag2_sty">近海边</view>
-        <view class="tag2_sty">近大路</view>
-      </view>
-      <view class="explain_tag1">
-        <view class="now_price">400万</view>
-        <view>500/平方</view>
-        
-      </view>
-    </view>
-  </view>
-</view>
-<view class="contents_ones">
-  <view class="main_content outborder">
-    <view class="contents_left_pic">
-      <image src="#" />
-      <view class="zx">甄选</view>
-    </view>
-    <view class="active_text">
-      <view class="explain_desc">楼房描述_可以可wwwwwwwwwwww</view>
-      <view class="explain_tag1">
-        <view>东南</view>
-        <view>大江</view>
-      </view>
-      <view class="explain_tag1 ">
-        <view class="tag2_sty">近地铁</view>
-        <view class="tag2_sty">近海边</view>
-        <view class="tag2_sty">近大路</view>
-      </view>
-      <view class="explain_tag1">
-        <view class="now_price">400万</view>
-        <view>500/平方</view>
-        
-      </view>
-    </view>
-  </view>
-</view>
-<view class="contents_ones">
-  <view class="main_content outborder">
-    <view class="contents_left_pic">
-      <image src="#" />
-      <view class="zx">甄选</view>
-    </view>
-    <view class="active_text">
-      <view class="explain_desc">楼房描述_可以可wwwwwwwwwwww</view>
-      <view class="explain_tag1">
-        <view>东南</view>
-        <view>大江</view>
-      </view>
-      <view class="explain_tag1 ">
-        <view class="tag2_sty">近地铁</view>
-        <view class="tag2_sty">近海边</view>
-        <view class="tag2_sty">近大路</view>
-      </view>
-      <view class="explain_tag1">
-        <view class="now_price">400万</view>
-        <view>500/平方</view>
-        
-      </view>
-    </view>
-  </view>
-</view>
-<view class="contents_ones">
-  <view class="main_content outborder">
-    <view class="contents_left_pic">
-      <image src="#" />
-      <view class="zx">甄选</view>
-    </view>
-    <view class="active_text">
-      <view class="explain_desc">楼房描述_可以可以wwwwwwwwwwwwwwwwww</view>
-      <view class="explain_tag1">
-        <view>东南</view>
-        <view>大江</view>
-      </view>
-      <view class="explain_tag1 ">
-        <view class="tag2_sty">近地铁</view>
-        <view class="tag2_sty">近海边</view>
-        <view class="tag2_sty">近大路</view>
-      </view>
-      <view class="explain_tag1">
-        <view class="now_price">400万</view>
-        <view>500/平方</view>
-        
-      </view>
-    </view>
-  </view>
-</view>

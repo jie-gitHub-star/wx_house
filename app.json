@@ -1,16 +1,20 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/shopinfo/shopinfo",
-    "pages/second_house/second_house",
-    "pages/login/login",
     "pages/user_info/user_info",
     
+    "pages/shopinfo/shopinfo",
+    
+    "pages/login/login",
+    "pages/now/now",
+    "pages/search/search",
+   
+    "pages/second_house/second_house",
 
     "pages/login_pho/login_pho",
-    "pages/logs/logs",
-    "pages/search/search",
-    "pages/now/now"
+    "pages/logs/logs"
+    
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,8 +37,8 @@
         "selectedIconPath": "./icon/icons/ind.png"
       },
       {
-        "pagePath": "pages/now/now",
-        "text": "消息",
+        "pagePath": "pages/search/search",
+        "text": "搜索",
         "iconPath": "./icon/icons/news.png",
         "selectedIconPath": "./icon/icons/news.png"
       },

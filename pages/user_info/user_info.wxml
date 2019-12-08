@@ -1,19 +1,40 @@
 <!--pages/user_info/user_info.wxml-->
+<block wx:if="{{avatars}}">
 <view class="side-top">
   <!-- 头像 -->
-  <image src="#" class="top_pic"/> 
+  <image src="{{avatars}}" class="top_pic"/> 
   <!--手机号码 -->
-  <view class="top_text">191***09</view> 
+  <view class="top_text">{{uname}}</view> 
 </view>
+</block>
+<block wx:else>
+  <view class="side-top">
+  <!-- 头像 -->
+  <image src="../../icon/upload/avatar_9.png" class="top_pic"/> 
+  <!--手机号码 -->
+  <view class="top_text">请登录</view> 
+  </view>
+</block>
 
-<view class="my_coll">
+<!-- /登录的内容，没有登录的话显示登陆陆按钮 -->
+<block wx:if="{{islogin}}">
+<view class="my_coll" bindtap="getcoll">
   <icon type="info" size="25px" color="#eee"/>
   <text >我的关注</text>
   <icon type="success" size="25px" color="#eee" style="margin-left:60%"/>
 </view>
-<view class="outlogin my_coll">
+<view class="outlogin my_coll" bindtap="outlogin">
   <icon type="info" size="25px" color="#eee"/>
   <text >退出登录</text>
   <icon type="success" size="25px" color="#eee" style="margin-left:60%"/>
 </view>
+</block>
+<block wx:else>
+<view class="my_coll">
+  <icon type="info" size="25px" color="#eee"/>
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" style="font-weight:600;" class="btn-login">登录</button>
+  <icon type="success" size="25px" color="#eee" style="margin-left:60%"/>
+</view>
+</block>
+
 

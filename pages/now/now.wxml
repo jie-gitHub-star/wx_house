@@ -1,2 +1,18 @@
 <!--pages/now/now.wxml-->
-<text>pages/now/now.wxml</text>
+
+<!-- 搜索结果列表 -->
+<block wx:if="{{datas}}">
+  <block wx:for="{{datas}}" wx:for-item="items" wx:key="keys">
+    <view class="contents_ones">
+      <view class="main_content outborder">
+          <view class="contents_left_pic" bindtap='toinfo' id="{{items.r_id}}">
+            <image src="{{addr}}{{items.pics}}" />
+            <!-- <view class="zx">甄选</view> -->
+          </view>
+        <view class="active_text">
+          <view class="explain_desc" bindtap='toinfo'>{{items.r_desc}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>

@@ -1,1 +1,86 @@
 /* pages/search/search.wxss */
+.search{
+  width: 90%;
+  margin:5px auto;
+  border-radius:1.5rem;
+  /* line-height: 3rem; */
+  padding:.5rem 0;
+  height:1.5rem;
+  background-color:#f0f0f0;
+  display:flex;
+  direction:colunm;
+}
+.sea-txt{
+  padding-left:1rem;
+  color:#a19898a4;  
+}
+.iconsea{
+  width:2rem;
+  height:2rem;
+}
+.btn-sea{
+  width:90%;
+  background:#f7f33c;
+  color:white;
+}
+
+
+/* 搜索结果 */
+.contents_ones{
+  width:90%;
+  margin:5px auto;
+  height:7rem;
+}
+.main_content{
+  display:flex;
+  flex-direction:flex-grow;
+}
+.contents_left_pic{
+  width:10rem;
+  height:5.5rem;
+  border-radius:.6rem;
+  overflow:hidden;
+  position:relative;
+}
+.contents_left_pic>image{
+  width:100%;
+  height:100%;
+}
+.zx{
+  position:absolute;
+  top:5px;
+  left:5px;
+  font-size:.9rem;
+  background:#FFA302;
+  color:white;
+  padding:2px .2rem;
+  border-radius:.3rem;
+}
+.active_text{
+  width:100%;
+  padding-left:.5rem;
+}
+.explain_desc{
+  font-weight:bold;
+  font-size:.95rem;
+}
+.explain_tag1{
+  color:#7D7E80;
+  font-size:.9rem;
+  margin-top:.1rem;
+}
+.explain_tag1>view{
+  display:inline-block;
+  margin-right:.5rem;
+}
+.tag2_sty{
+  background:#EBF5F7;
+  padding:.2rem .4rem;
+  color:#6A858E;
+  border-radius:.3rem;
+  margin-top:.2rem;
+}
+.now_price{
+  color:#FF532F;
+  font-weight:bold;
+}

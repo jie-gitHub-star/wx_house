@@ -1,53 +1,54 @@
 <!--pages/second_house/second_house.wxml-->
-<view class="search">
-  <icon type="search" size="25px" class="iconsea"/>
-  <input placeholder="请处输入小区或商圈名称"/>
-</view>
+<form>
+  <!-- <view class="search">
+    <icon type="search" size="25px" class="iconsea"/>
+    <input value="{{inpval}}" style="width:90%;" name="searchs"/>
+  </view> -->
 
-<view class="sea_area">
-  <!-- 下拉框个件 -->
-  <block wx:for="{{sea_areas}}">
-    <view class="sea_one"><!-- 第二个 -->
-      <!-- 下拉框文字 -->
-      <view class="one_txt">{{item.area_txt}}</view>
-      <!-- 下拉框图标 -->
-      <view class="one_icon"><image src="{{item.area_icon}}"/></view>
-    </view>
-  </block>  
-</view>
+  <view class="sea_area">
+    <!-- 下拉框个件 -->
+    <block wx:for="{{sea_areas}}" wx:key="key">
+      <view class="sea_one" data-area="{{item.aid}}" bindtap='{{item.s}}'><!-- 第二个 -->
+        <!-- 下拉框文字 -->
+        <view class="one_txt">{{item.area_txt}}</view>
+        <!-- 下拉框图标 -->
+        <view class="one_icon"><image src="{{item.area_icon}}"/></view>
+      </view>
+    </block>  
+  </view>
+</form>
 <!-- 横线 -->
-<view class="hr_"></view>
+<view class="hr_" style="clear:both"></view>
 <!-- 下拉区域 -->
-<view></view>
+<view class="sel_area" hidden="{{ishidden}}">
+  <block wx:for="{{area}}" wx:key="key">
+    <text class="keywords" bindtap="taginfo" data-index="{{item}}" data-pid="1">{{item}}</text>
+  </block>
+</view>
 
 <!-- 搜索结果列表 -->
-<block wx:if="{{data}}">
-  <block wx:for="{{data}}">  
+<block wx:if="{{datas}}">
+  <block wx:for="{{datas}}" wx:for-item="items" wx:key="keys">
     <view class="contents_ones">
       <view class="main_content outborder">
-        <view class="contents_left_pic">
-          <!-- 封面 -->
-          <image src="{{item.pic}}" />
-          <view class="zx">甄选</view>
-        </view>
+          <view class="contents_left_pic" bindtap='toinfo' id="{{items.r_id}}">
+            <image src="{{addr}}{{items.pics}}" />
+            <view class="zx">甄选</view>
+          </view>
         <view class="active_text">
-          <view class="explain_desc">{{item.desc}}</view>
+          <view class="explain_desc" bindtap='toinfo'>{{items.r_desc}}</view>
           <view class="explain_tag1">
-          <block wx:for="{{item.tag1}}" wx:for-item="tag1">
-            <view>{{tag1.bq}}</view>
-          </block>
-          </view> 
+            <view>{{items.house_type}}</view>
+            <!-- <view>{{items}}</view> -->
+          </view>
           <view class="explain_tag1 ">
-            <block wx:for="{{item.tag1}}" wx:for-item="tag1">
-              <view>{{tag1.bq}}</view>
-            </block>
-            <view class="tag2_sty">近地铁</view>
-            <view class="tag2_sty">近海边</view>
+            <view class="tag2_sty">{{items.dispark}}</view>
+            <view class="tag2_sty">{{items.oriented}}</view>
             <view class="tag2_sty">近大路</view>
           </view>
           <view class="explain_tag1">
-            <view class="now_price">400万</view>
-            <view>500/平方</view>
+            <view class="now_price">{{items.sell_price}}万</view>
+            <view>{{items.unit_price}}元/平方</view>
             
           </view>
         </view>

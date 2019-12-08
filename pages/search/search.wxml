@@ -1,2 +1,36 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+  <view class="search">
+    <input value="{{inpval}}" style="width:90%;" name="searchs" value="{{sear_content}}" class="sea-txt" bindinput="search"/>
+  </view>
+<button class="btn-sea" style="width:90%"  bindtap="searchGo">搜索一下<icon type="search" size="25px" class="iconsea"/></button>
+
+<!-- 搜索结果列表 -->
+<block wx:if="{{datas}}">
+  <block wx:for="{{datas}}" wx:for-item="items" wx:key="keys">
+    <view class="contents_ones">
+      <view class="main_content outborder">
+          <view class="contents_left_pic" bindtap='toinfo' id="{{items.r_id}}">
+            <image src="{{addr}}{{items.pics}}" />
+            <view class="zx">甄选</view>
+          </view>
+        <view class="active_text">
+          <view class="explain_desc" bindtap='toinfo'>{{items.r_desc}}</view>
+          <view class="explain_tag1">
+            <view>{{items.house_type}}</view>
+            <!-- <view>{{items}}</view> -->
+          </view>
+          <view class="explain_tag1 ">
+            <view class="tag2_sty">{{items.dispark}}</view>
+            <view class="tag2_sty">{{items.oriented}}</view>
+            <view class="tag2_sty">近大路</view>
+          </view>
+          <view class="explain_tag1">
+            <view class="now_price">{{items.sell_price}}万</view>
+            <view>{{items.unit_price}}元/平方</view>
+            
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
